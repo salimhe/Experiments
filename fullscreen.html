@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Fulltest</title>
+<style>
+#mycanvas{
+background: #cccccc;
+display: block;
+padding: 2% 2% 2% 2%;
+}
+</style>
+</head>
+<body>
+<canvas id=mycanvas>
+</canvas>
+
+<script>
+function fullScreen(element){
+if (element.requestFullScreen){
+element.requestFullScreen()
+}
+else if(element.mozRequestFullScreen){
+element.mozRequestFullScreen()
+}
+else if(element.webkitRequestFullScreen){
+element.webkitRequestFullScreen()
+}
+}
+</script>
+<button id=btnlaunch onclick=fullScreen(document.documentElement)>Fullscreen</button>
+<button id=btnlaunch onclick=fullScreen(document.getElementById('mycanvas'))>Fullscreen</button>
+
+</body>
+</html>
